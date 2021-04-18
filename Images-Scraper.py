@@ -21,7 +21,7 @@ def bolo():
         print("Processing",File)
         try:
             i = requests.get(File) if File.startswith("http") else requests.get(url+File)
-            with open('F:/Python projects/Images/Image'+str(random.random())+str(time.strftime("%Y_%m_%d_%H_%M_%S"))+ (suffix if suffix in arr else ".jpg"), 'wb') as Hola:
+            with open('Image'+str(random.random())+str(time.strftime("%Y_%m_%d_%H_%M_%S"))+ (suffix if suffix in arr else ".jpg"), 'wb') as Hola:
                 Hola.write(i.content)    
                 print("Wrote : ", File)
         except Exception as e:
