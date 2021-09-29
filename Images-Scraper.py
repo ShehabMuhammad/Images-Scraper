@@ -5,7 +5,7 @@ root = t.Tk();root.title("Images Scraper")
 
 ent = t.Entry(root)
 
-def bolo():
+def scraper():
     url = ent.get()
     # connect to the url
     website = requests.get(url)
@@ -30,7 +30,7 @@ def bolo():
             continue;        
     print("[FINISHED!]")
         
-b = t.Button(root, text='GET', command=bolo).pack()
+b = t.Button(root, text='GET', command=scraper).pack()
 
 ent.pack()
 
